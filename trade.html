@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TradeX | Paper Trade</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Trade<span>X</span>
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="market.html">Market</a>
+                </li>
+
+                <li>
+                    <a href="trade.html">Trade</a>
+                </li>
+
+                <li><a href="portfolio.html">Portfolio</a></li>
+
+                <li><a href="learn.html">Learn</a></li>
+
+            </ul>
+
+            <button class="login-btn">
+                Login
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- TRADING SECTION -->
+
+    <main class="trade-page">
+
+
+        <div class="trade-heading">
+
+            <p class="small-title">
+                PAPER TRADING
+            </p>
+
+            <h1>
+                Practice Trading
+            </h1>
+
+            <p>
+                Buy and sell stocks using virtual money.
+            </p>
+
+        </div>
+
+
+
+        <section class="trade-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="trade-info">
+
+                <h2>
+                    Your Virtual Account
+                </h2>
+
+                <div class="balance-card">
+
+                    <p>
+                        Available Balance
+                    </p>
+
+                    <h2>
+                        ₹10,00,000
+                    </h2>
+
+                    <span>
+                        Virtual Money
+                    </span>
+
+                </div>
+
+
+                <div class="balance-card">
+
+                    <p>
+                        Portfolio Value
+                    </p>
+
+                    <h2>
+                        ₹10,00,000
+                    </h2>
+
+                    <span>
+                        Total Value
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="trading-box">
+
+                <h2>
+                    Place Paper Trade
+                </h2>
+
+
+                <label>
+                    Select Stock
+                </label>
+
+                <select id="stock">
+
+                    <option value="RELIANCE">
+                        RELIANCE - ₹1,398.50
+                    </option>
+
+                    <option value="TCS">
+                        TCS - ₹3,145.20
+                    </option>
+
+                    <option value="INFY">
+                        INFY - ₹1,532.80
+                    </option>
+
+                    <option value="HDFCBANK">
+                        HDFCBANK - ₹975.40
+                    </option>
+
+                    <option value="TATAMOTORS">
+                        TATAMOTORS - ₹714.25
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Quantity
+                </label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    placeholder="Enter quantity"
+                    min="1"
+                >
+
+
+                <div class="order-buttons">
+
+                    <button class="buy-btn">
+                        BUY
+                    </button>
+
+                    <button class="sell-btn">
+                        SELL
+                    </button>
+
+                </div>
+
+
+                <p class="trade-message">
+                    This is a paper trade. No real money is involved.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            TradeX
+        </h3>
+
+        <p>
+            Paper Trading Platform for Educational Purposes
+        </p>
+
+        <p>
+            © 2026 TradeX College Project
+        </p>
+
+    </footer>
+
+
+</body>
+<script src="js/app.js"></script>
+<script>
+
+    const selectedStock =
+        localStorage.getItem("selectedStock");
+
+    if (selectedStock) {
+
+        document.getElementById("stock").value =
+            selectedStock;
+
+    }
+
+</script>
+
+</html>
